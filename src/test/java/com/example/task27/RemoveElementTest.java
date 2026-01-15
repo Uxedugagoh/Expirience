@@ -9,6 +9,12 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Здесь я добавляю комментарий, после того как поменял мейл пользователя и у меня теперь должны
+ * отображаться коммиты в истории гита
+ * */
+
+
 class RemoveElementTest {
     public static Stream<Arguments> add() {
         return Stream.of(
