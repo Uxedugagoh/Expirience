@@ -1,4 +1,4 @@
-package com.example.task26;
+package com.example.task27;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -9,14 +9,16 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class RemoveDuplicatesTest {
+class RemoveElementTest {
     public static Stream<Arguments> add() {
         return Stream.of(
-                Arguments.of(4, List.of(0, 1, 2, 3)),
+                Arguments.of(3, List.of(0, 1, 2, 3)),
                 Arguments.of(4, List.of(0, 0, 0, 1, 1, 2, 3)),
-                Arguments.of(3, List.of(0, 0, 0, 1, 2)),
-                Arguments.of(2, List.of(0, 1)),
-                Arguments.of(1, List.of(0, 0, 0, 0))
+                Arguments.of(2, List.of(0, 0, 0, 1, 2)),
+                Arguments.of(1, List.of(0, 1)),
+                Arguments.of(0, List.of(0, 0, 0, 0)),
+                Arguments.of(2, List.of(1, 2, 0, 0)),
+                Arguments.of(3, List.of(0, 0, 0, 0, 1, 3, 0, 5))
         );
     }
 
@@ -26,7 +28,7 @@ class RemoveDuplicatesTest {
         int[] givenArr;
         givenArr = ListToArray(givenList);
 
-        int resultK = RemoveDuplicates.removeDuplicates(givenArr);
+        int resultK = RemoveElement.removeElement(givenArr, 0);
 
         assertEquals(expectedK, resultK, () -> String.format("Значения были: " +
                 "expected k = %d, k = %d", expectedK, resultK));

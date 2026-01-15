@@ -40,7 +40,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 import java.util.Arrays;
 
 public class RemoveDuplicates {
-    ///  Не смотря на недостатки написанного мной теста, программа работает как надо.
+    ///  Несмотря на недостатки написанного мной теста, программа работает как надо.
     public static int removeDuplicates(int[] nums) {
         if (nums.length == 0) {
             return 0;
