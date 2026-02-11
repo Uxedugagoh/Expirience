@@ -17,9 +17,7 @@ public class Seats {
                 prevI = i;
             }
         }
-        if (seats[seats.length - 1] == 1) {
-            maxdistance = Math.max(maxdistance, ((seats.length - 1 - prevI) / 2));
-        } else {
+        if (seats[seats.length - 1] == 0) {
             maxdistance = Math.max(maxdistance, (seats.length - 1 - prevI));
         }
         return maxdistance;
